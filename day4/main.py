@@ -1,67 +1,90 @@
 import os
-from pathlib import Path
+import json
+
 from dotenv import load_dotenv
 from groq import Groq
 from pydantic import BaseModel
 
+
+# Configuration
+
 load_dotenv()
 
 api_key = os.getenv("GROQ_API_KEY")
+
 if not api_key:
-    raise ValueError("API KEY NOT FOUND")
+    raise ValueError("GROQ_API_KEY not found")
 
-client = Groq(api_key = api_key)
+MODEL = "openai/gpt-oss-120b"
 
-model = "openai/gpt-oss-120b"
+client = Groq(api_key=api_key)
+
+
+# Data model
 
 class Ticket(BaseModel):
-    name:str
-    email:str
-    issue:str
+    name: str
+    email: str
+    issue: str
+
+
+# Input
+
+text = """
+Hello, My name is Vedang and my laptop is not working properly.
+I want a replacement. This is my email - vedang@fds.in
+"""
+
+
+# Prompt
 
 schema = Ticket.model_json_schema()
 
-response_format = {
-    "type": "json_object"
-}
-
 system_prompt = f"""
-Extract the personal information from the ticket based on this schema and give me a json output. {schema}
+Extract the following information from the customer ticket.
+
+Return JSON matching this schema:
+
+{schema}
 """
 
-message_system = {
-    "role": "system",
-    "content": system_prompt
-}
+user_prompt = f"""
+Customer ticket:
 
-
-role = "user"
-
-text = "Hello, My name is Vedang and my laptop is not working properly i want a replacement.. this is my email - vedang@fds.in"
-
-prompt = f"""
-    This is a customer ticket, extract the customer personal info. {text}
+{text}
 """
 
-message = {
-    "role" : role,
-    "content": prompt
-}
 
-messages = [message_system, message]
+# LLM request
 
-response = client.chat.completions.create(model=model, messages=messages, response_format=response_format)
- 
-answer = response.choices[0].message.content;
+messages = [
+    {
+        "role": "system",
+        "content": system_prompt
+    },
+    {
+        "role": "user",
+        "content": user_prompt
+    }
+]
 
-print(answer)
+response = client.chat.completions.create(
+    model=MODEL,
+    messages=messages,
+    response_format={"type": "json_object"}
+)
 
 
-import json
-raw_json = answer
-data_file = json.loads(raw_json)
+# Parse + validate
 
-ticket = Ticket(**data_file)
+answer = response.choices[0].message.content
+
+data = json.loads(answer)
+
+ticket = Ticket(**data)
+
+
+# Output
 
 print(ticket.name)
 print(ticket.email)
