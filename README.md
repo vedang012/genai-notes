@@ -27,3 +27,10 @@ This repository serves as my personal knowledge base where I document concepts, 
 
 - Learned about **Pydentic and JSON**
 - Learned about LLM response type
+
+### Day 5 : 
+
+- Built a mini project - AI Resume Parser
+- Parsed PDF files using PyPDF
+- It parses the resume and prints Name, Mobile, Email, Experience, Skills, Education and Projects
+- Future Scope : Score the resume according to the Job Description
