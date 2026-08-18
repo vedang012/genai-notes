@@ -11,7 +11,7 @@ if not api_key:
 
 client = Groq(api_key = api_key)
 
-model = "llama-3.3-70b-versatile"
+model = "openai/gpt-oss-120b"
 
 prompt = "Suggest a name for my food app"
 
