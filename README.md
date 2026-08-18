@@ -19,4 +19,11 @@ This repository serves as my personal knowledge base where I document concepts, 
 - Used it to control randomness and creativity of the LLM's response 
 
 
+### Day 3 :
 
+- Learned about **LLM tokens**
+
+### Day 4 :
+
+- Learned about **Pydentic and JSON**
+- Learned about LLM response type
