@@ -34,3 +34,8 @@ This repository serves as my personal knowledge base where I document concepts, 
 - Parsed PDF files using PyPDF
 - It parses the resume and prints Name, Mobile, Email, Experience, Skills, Education and Projects
 - Future Scope : Score the resume according to the Job Description
+
+### Day 6 : 
+
+- Learned about prompt engineering and how to give a clear, and specific prompt to an LLM
+- 6 Steps to design a good prompt - Role, Task, Constraint, Output Format, OneShot/ZeroShot (Giving examples), Fallback
