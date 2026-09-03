@@ -57,3 +57,7 @@ User Question --> LLM --> Response --> Tool Call --> Python Tool --> Observation
 - Learned about the concept of **Prompt Chaining**
 - Divided a complex task into multiple prompts to achieve desired result efficiently.
 - Created a mini project
+
+### Day 9
+
+- Learned about Streaming, why is it used and how to implement streaming
