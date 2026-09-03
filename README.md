@@ -47,24 +47,8 @@ This repository serves as my personal knowledge base where I document concepts, 
 - Implemented a basic ReAct agent by following a tutorial (main.py)
 - Found out that the tutorial used regex for parsing for tool calls
 - So rebuilt the agent using JSON which is cleaner architectural design (agent.py)
+
 Agent Flow
-User Question
-      ↓
-     LLM
-      ↓
-  JSON Decision
-      ↓
-   Tool Call
-      ↓
-  Python Tool
-      ↓
-  Observation
-      ↓
-     LLM
-      ↓
-  JSON Decision
-      ↓
-     ...
-      ↓
- Final Answer
- 
+
+User Question --> LLM --> Response --> Tool Call --> Python Tool --> Observation --> LLM --> Response --> ... --> Final Answer
+      
