@@ -61,3 +61,7 @@ User Question --> LLM --> Response --> Tool Call --> Python Tool --> Observation
 ### Day 9
 
 - Learned about Streaming, why is it used and how to implement streaming
+
+### Day 10
+
+- Learned about the fundamental concept of Retrieval and Knowledge Bases
