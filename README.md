@@ -65,3 +65,9 @@ User Question --> LLM --> Response --> Tool Call --> Python Tool --> Observation
 ### Day 10
 
 - Learned about the fundamental concept of Retrieval and Knowledge Bases
+
+### Day 11
+
+- Learned about Embeddings
+- Converted text into vectors 
+- Checked cosine similarity between two vectors
