@@ -52,3 +52,8 @@ Agent Flow
 
 User Question --> LLM --> Response --> Tool Call --> Python Tool --> Observation --> LLM --> Response --> ... --> Final Answer
       
+### Day 8
+
+- Learned about the concept of **Prompt Chaining**
+- Divided a complex task into multiple prompts to achieve desired result efficiently.
+- Created a mini project
