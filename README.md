@@ -39,3 +39,32 @@ This repository serves as my personal knowledge base where I document concepts, 
 
 - Learned about prompt engineering and how to give a clear, and specific prompt to an LLM
 - 6 Steps to design a good prompt - Role, Task, Constraint, Output Format, OneShot/ZeroShot (Giving examples), Fallback
+
+### Day 7
+
+- Learned about ReAct technique
+- Think -> Act -> Observer -> Anser
+- Implemented a basic ReAct agent by following a tutorial (main.py)
+- Found out that the tutorial used regex for parsing for tool calls
+- So rebuilt the agent using JSON which is cleaner architectural design (agent.py)
+Agent Flow
+User Question
+      ↓
+     LLM
+      ↓
+  JSON Decision
+      ↓
+   Tool Call
+      ↓
+  Python Tool
+      ↓
+  Observation
+      ↓
+     LLM
+      ↓
+  JSON Decision
+      ↓
+     ...
+      ↓
+ Final Answer
+ 
