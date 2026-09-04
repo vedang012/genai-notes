@@ -79,3 +79,12 @@ User Question --> LLM --> Response --> Tool Call --> Python Tool --> Observation
 - Used cosine similarity to retrieve more semantically related context
 - Generated LLM response with the retrieved context
 ''' indexing -> query processing -> retrieval -> generation '''
+
+### Day 13 
+
+- Implemented a RAG pipeline using Qdrant Vector Database
+- Stored document embeddings as vectors in Qdrant
+- Used cosine similarity to retrieve the most relevant chunks for a query
+- Tested semantic search with queries that had no exact keyword match in the knowledge base
+- Used the retrieved context to generate answers with Groq LLM
+- Understood how Vector Databases enable semantic search in RAG systems
