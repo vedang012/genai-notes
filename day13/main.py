@@ -79,22 +79,25 @@ Context:
 
 
 # Query
-query = "I'm in Pune and I wanna go somewhere uphill."
+while True:
+    query = str(input("enter your prompt.. type \"exit\" to exit : \n"))
 
-results = search(query)
+    if query == "exit": break 
 
-# Extract retrieved context
-context = "\n\n".join(
-    result.payload["text"]
-    for result in results
-)
+    results = search(query)
 
-# Debug retrieval
-for result in results:
-    print("=" * 60)
-    print("Score:", result.score)
-    print(result.payload["text"])
+    # Extract retrieved context
+    context = "\n\n".join(
+        result.payload["text"]
+        for result in results
+    )
 
-print("\nANSWER:\n")
+    # Debug retrieval
+    for result in results:
+        print("=" * 60)
+        print("Score:", result.score)
+        print(result.payload["text"])
 
-print(ask_groq(query, context))
+    print("\nANSWER:\n")
+
+    print(ask_groq(query, context), "\n\n")
