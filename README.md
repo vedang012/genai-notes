@@ -88,3 +88,10 @@ User Question --> LLM --> Response --> Tool Call --> Python Tool --> Observation
 - Tested semantic search with queries that had no exact keyword match in the knowledge base
 - Used the retrieved context to generate answers with Groq LLM
 - Understood how Vector Databases enable semantic search in RAG systems
+
+### Day 14
+
+- Learned about HSNW indexing algorith (Hierarchical Navigable Small Words)
+- Learned about qdrant filter based search
+- Implemented filter based search in a RAG system
+- Generated LLM response with the retrieved context and Groq API
