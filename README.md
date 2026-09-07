@@ -91,7 +91,7 @@ User Question --> LLM --> Response --> Tool Call --> Python Tool --> Observation
 
 ### Day 14
 
-- Learned about HSNW indexing algorith (Hierarchical Navigable Small Words)
+- Learned about HNSW indexing algorithm (Hierarchical Navigable Small Words)
 - Learned about qdrant filter based search
 - Implemented filter based search in a RAG system
 - Generated LLM response with the retrieved context and Groq API
