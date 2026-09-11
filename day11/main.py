@@ -1,7 +1,5 @@
-from groq import Groq
 from dotenv import load_dotenv
 
-import os 
 import numpy as np
 from sentence_transformers import SentenceTransformer
 

@@ -101,3 +101,10 @@ User Question --> LLM --> Response --> Tool Call --> Python Tool --> Observation
 - Learned about chunking and it's importance
 - Learned about different chunking techniques
 - Implemented Fixed size, Paragraph and Recursive chunking using langchain_text_splitters
+
+### Day 16
+
+- Learned about Rag Evaluation
+- It's techniques 
+- LLM as a judge
+- Precision, Accuracy, Faithfulness, Correctness, Relevence
