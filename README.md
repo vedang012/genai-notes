@@ -108,3 +108,10 @@ User Question --> LLM --> Response --> Tool Call --> Python Tool --> Observation
 - It's techniques 
 - LLM as a judge
 - Precision, Accuracy, Faithfulness, Correctness, Relevence
+
+### Day 17
+
+- Created an AI Agent
+- Used Tavily to create web search tool
+- Created calculator tool
+- The agent uses these tools and Groq LLM API to answer user's questions
